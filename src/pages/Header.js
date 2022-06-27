@@ -1,12 +1,12 @@
 import React from "react";
 import "../App.css";
 
- let menu = document.getElementById("menu");
- let nav = document.getElementById("nav")
+//  let menu = document.getElementById("menu");
+//  let nav = document.getElementById("nav")
 
- menu.addEventListener('click', () => {
-   nav.classList.toggle('show');
- });
+//  menu.addEventListener('click', () => {
+//    nav.classList.toggle('show');
+//  });
 
 function Header() {
   return (
