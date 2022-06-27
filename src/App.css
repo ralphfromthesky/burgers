@@ -1,38 +1,222 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.mainHead {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: .5fr 1fr 0.3fr .01fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.mainHead h1 {
+  color: rgb(247, 247, 232);
   text-align: center;
+  padding-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainHead i {
+  color: yellow;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainHead ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  font-weight: bold;
+  color: white;
+  padding-top: 10px;
+
+}
+
+.mainHead li {
+  transition: 0.6s;
+}
+
+li:hover {
+  color: yellow;
+  border-bottom: 1px solid white;
+}
+
+.mainHead li {
+  margin: 4%;
+  transform: .6s;
+  cursor: pointer;
+}
+
+button {
+  border-radius: 1px;
+  background-color: rgb(255, 0, 0);
+  padding: 7%;
+  transition: .6s;
+  border: none;
+  cursor: pointer;
+
+}
+
+button:hover {
+  transform: translateY(-10px);
+  border-radius: 5px;
+  background: yellow;
+  box-shadow: 1px 1px 4px white,
+    -1px -1px 4px #ffffff;
+  color: rgb(6, 6, 6);
+  border: none;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bot {
+  text-align: center;
+  padding-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mainBody {
+  background-image: url(./images/2.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.first {
+  height: 10px;
+  width: 32.5%;
+  background-color: yellow;
+}
+#second {
+  margin-bottom: 3%;
+  width: 41.5%;
+}
+.menu {
+  padding-top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu i {
+  font-size: 3rem;
+}
+
+.bts {
+  border-radius: 2px;
+  background-color: rgb(255, 0, 0);
+  padding: 1%;
+  transition: .6s;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.mainContent {
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8%;
+}
+
+.mainContent h3 {
+  font-size: .8rem;
+  color: wheat;
+
+}
+
+.mainContent h1 {
+  font-size: 2rem;
+}
+
+.mainContent h2 {
+  font-size: .9rem;
+  color: wheat;
+}
+
+.social i {
+  color: yellow;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 680px) {
+  .mainHead {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    max-height: 5vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mainHead .nav.show {
+    display: none;
+    transition: .6s;
   }
+
+  button {
+    padding: 3%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .mainContent h1 {
+    font-size: 1.2rem;
+  }
+
+  .mainContent h2 {
+    font-size: .6rem;
+  }
+
+  .mainContent h3 {
+    font-size: .6rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .mainHead h1 {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .mainHead {
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: dense;
+  }
+
+  .menu {
+    text-align: center;
+  }
+
+  .mainHead ul {
+    flex-direction: column;
+    grid-column-start: 4;
+    grid-column-end: 1;
+    align-items: flex-end;
+    background-color: yellow;
+    line-height: 0;
+    color: black;
+  }
+
 }
